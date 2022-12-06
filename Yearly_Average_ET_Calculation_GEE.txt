@@ -1,5 +1,5 @@
 /*
-Title: Calculating annual average evapotanspiration using MOD16A2.006 (ET) data
+Title: Calculating annual average evapotranspiration using MOD16A2.006 (ET) data
 Author: Shahriar Rahman
 Email: shahriar.env12@gmail.com
 Acknowledgements: Google Earth Engine, Stack Exchange
