@@ -13,6 +13,9 @@ var after_end = '2020-05-31';
 //Add this line to get GSW 
 var GSW = ee.Image("JRC/GSW1_3/GlobalSurfaceWater");
 
+//Add this line to get HydroSHEDS DEM
+var Hydro_DEM = ee.Image('WWF/HydroSHEDS/03VFDEM');
+
 //FAO Global Administrative Unit Layers 2015 
 var admin = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level1");
 
