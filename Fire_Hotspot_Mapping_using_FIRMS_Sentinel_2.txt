@@ -10,12 +10,12 @@ var NSW = ee.FeatureCollection("FAO/GAUL/2015/level1")
 
 //Import and filter FIRMS fire hotspot data
 var FIRMS = ee.ImageCollection("FIRMS")
-              .filterBounds(NSW).filterDate("2019-10-01","2020-02-12");
+              .filterBounds(NSW).filterDate("2019-10-01","2020-02-15");
 
 //Import and filter Sentinel-2 dataset
 var S2 = ee.ImageCollection("COPERNICUS/S2")
             .filter(ee.Filter.lte('CLOUDY_PIXEL_PERCENTAGE', 10))
-            .filterBounds(NSW).filterDate("2019-10-01","2020-02-12");
+            .filterBounds(NSW).filterDate("2019-10-01","2020-02-15");
             
 //Setting map centre with zoom level 8
 Map.centerObject(NSW, 8);
