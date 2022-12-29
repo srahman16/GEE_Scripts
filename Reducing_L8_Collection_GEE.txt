@@ -8,7 +8,7 @@ Acknowledgements: GEE
 var geometry = ee.Geometry.Point([150.45, -33.63]); //define as per your requirements
 //Image Collection: Landsat 8 
 var dataset_ls = ee.ImageCollection('LANDSAT/LC08/C02/T1')
-    .filterDate('2021-05-01', '2021-06-01') //date range 1 May - 1 June 2021
+    .filterDate('2020-05-01', '2021-06-01') //date range 1 May 2020 - 1 June 2021
     .filterBounds(geometry); //choose geometry as per your requirements
 
 //Computes a Landsat TOA composite from a collection of Landsat scenes
