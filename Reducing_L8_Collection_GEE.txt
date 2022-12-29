@@ -4,6 +4,8 @@ Email: shahriar.env12@gmail.com
 Acknowledgements: GEE
 */
 
+//Geometry settings
+var geometry = ee.Geometry.Point([150.45, -33.63]); //define as per your requirements
 //Image Collection: Landsat 8 
 var dataset_ls = ee.ImageCollection('LANDSAT/LC08/C02/T1')
     .filterDate('2021-05-01', '2021-06-01') //date range 1 May - 1 June 2021
@@ -27,7 +29,7 @@ var visualisation = {
 Map.centerObject(geometry, 11);
 
 //Adding a layer for the reduced Landsat 8 composite 
-Map.addLayer(dataset, visualization, "L8_RGB");
+Map.addLayer(dataset, visualisation, "L8_RGB");
 
 //End of script//
 //Please like, share and subscribe for more videos!!!
