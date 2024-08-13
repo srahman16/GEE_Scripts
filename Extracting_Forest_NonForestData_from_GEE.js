@@ -17,11 +17,11 @@ years.forEach(function(year) {
   if (collectionSize > 0) {
     var image = filtered.first();
     if (image && image.bandNames().size().getInfo() > 0) {
-      var clippedImage = image.clip(geometry); // Clip to the shapefile boundary
+      var clippedImage = image.clip(geometry);
       Export.image.toDrive({
         image: clippedImage,
         description: 'ALOS_PALSAR_' + year,
-        scale: 25,  // 25 meters per pixel
+        scale: 25,  //25m spatial resolution
         region: geometry,
         fileFormat: 'GeoTIFF',
         maxPixels: 1e13
