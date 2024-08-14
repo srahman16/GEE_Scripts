@@ -1,13 +1,13 @@
 /*
 Title: Extract MODIS Fire_cci Burned Area Pixel Product with it's three bands from GEE
 Email: shahriar.env12@gmail.com
-Acknowledgements: UN-SPIDER.org
+Acknowledgements: Google Earth Engine
 */
 
 var geometry = ee.FeatureCollection('users/shahriar***/KangarooIsland'); // shapefile
 var dataset = ee.ImageCollection('ESA/CCI/FireCCI/5_1')
                 .map(function(image) {
-                  return image.toInt16(); // I set it to Integer 16bit, but it may vary for different dataset
+                  return image.toInt16(); // I set it to Integer 16 bit, but it may vary for different dataset
                 });
 //Data date
 var startYear = 2019;
@@ -29,9 +29,9 @@ for (var year = startYear; year <= endYear; year++) {
         Export.image.toDrive({
           image: singleBandImage,
           description: 'FireCCI_' + year + '_' + month + '_' + bandName + '_250m',
-          folder: 'EarthEngineImages', // Optional: Specify a folder in Google Drive
+          folder: 'EarthEngineImages', 
           fileNamePrefix: 'FireCCI_' + year + '_' + month + '_' + bandName + '_250m', // filename
-          scale: 250,  // spatial resolution: here, 250m
+          scale: 250,  // spatial resolution: here 250m
           region: geometry,
           fileFormat: 'GeoTIFF',
           maxPixels: 1e13
